@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Configure AutoFill</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 16px;
+            background-color: #FAFAFA;
+            width: 200px;
+        }
+        input[type="text"], button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #CCC;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color .3s;
+        }
+        input[type="text"]:focus {
+            border-color: #3F51B5;
+            outline: none;
+        }
+        button {
+            background-color: #3F51B5;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #303F9F;
+        }
+        #entries {
+            margin-top: 12px;
+        }
+        .entry {
+            background: #E3F2FD;
+            padding: 8px;
+            margin-top: 8px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="domain">Domain:</label>
+        <input type="text" id="domain" placeholder="Enter domain">
+    </div>
+    <div>
+        <label for="selector">Selector:</label>
+        <input type="text" id="selector" placeholder="CSS Selector">
+    </div>
+    <div>
+        <label for="value">Value:</label>
+        <input type="text" id="value" placeholder="Value to fill">
+    </div>
+    <button id="save">Add</button>
+    <div id="entries"></div>
+    <script src="popup.js"></script>
+</body>
+</html>
