@@ -1,7 +1,9 @@
 chrome.runtime.onInstalled.addListener(() => {
-    chrome.storage.local.set({ autofillData: {
-    
-    } });
+    chrome.storage.local.get(['autofillData'], (result) => {
+        if (!result.autofillData) {
+            chrome.storage.local.set({ autofillData: {} });
+        }
+    });
 });
 
 
